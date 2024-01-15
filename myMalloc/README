@@ -1,0 +1,29 @@
+netID: nmm229
+Name: Noor Mashal
+
+Task1: Allocate and Deallocate a 1-Byte Object 120 Times: This scenario repeatedly allocates it and immediately deallocates them 120 times to assess basic memory allocation and deallocation.
+
+Task 2: Allocate 120 1-Byte Objects and Deallocate Them: The program allocates 120 1-byte objects, stores the pointers in an array, and deallocates all objects to evaluate the handling of multiple allocations and deallocations.
+
+Task 3: Random Allocation and Deallocation of 1-Byte Objects: In this scenario, it dynamically allocates and deallocates 1-byte objects using a random choice process, continuing until 120 allocations are made. Any remaining allocated objects are also deallocated to test the robustness of the functions in random allocation patterns.
+
+Task 4 is meant to check if the contents on the chunk is readable. We do this by giving the malloc'd chunk and an array the same information at exactly the same indices. We then check if both the array and malloc'd array are equal. If they are never not equal, we print that there was a fault in the memory.
+
+Task 5 is meant to test the boundaries and also check if the reported errors are what's expected it when he don't use malloc correctly. 
+
+
+Also I have had to make a connector() function in order to connect 2 chunks of free'd blocks in my memory in order be able to allocate more space for the user and be more efficient. Furthermore, I had to call the function twice to ensure the function covers the whole memory array twice and not leave anything behind that it was meant to perform action on. I also made a memCleared() function to traverse through the memory and check if it's empty and to show my mymalloc and myfree has been working correctly 
+
+The only arguments my functions take are the mymalloc() and myfree() function. They both take a file and line argument as specified by the assignment but not asking the user anything different than the normal malloc() and free().
+
+
+When it came to addressing errors, I  chose to use "return" because I want the rest of the code to keep running. 
+"exit()", makes it more diffucult to identify the exact location and circumstances that led to the error. Using return allows you to set breakpoints and inspect variables in a more controlled manner. I think functions should ideally be designed to be reusable in different parts of your code. If a function always calls exit(), it cannot be easily reused in other contexts without terminating the entire program.
+
+
+            Time in milliseconds (ms)
+Average of Task 1: 12 ms
+Average of Task 2: 106 ms
+Average of Task 3: 322 ms
+Average of Task 4: 7 ms
+Average of Task 5: 32 ms
