@@ -1,0 +1,1 @@
+ls my* out*.txt
