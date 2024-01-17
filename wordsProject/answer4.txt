@@ -1,0 +1,15 @@
+bruh 4
+Bar 2
+bar 2
+'oo 1
+Foo 1
+Foo-bar 1
+Super 1
+baz 1
+foo 1
+quux 1
+ad 1
+baz 1
+dsauih 1
+foo 1
+quux 1
